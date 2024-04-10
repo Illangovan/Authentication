@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication app</title>
+    <style>
+        h1{
+            top: 230px;
+            position: relative;
+           text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <h1>Log in</h1>
+    <form action="/home" method="post">
+    <div>
+        <label for="uname">USERNAME:</label>
+        <input type="text" name="uname" required>
+    </div>
+   <div><label for="pwd">PASSWORD:</label>
+    <input type="text" name="pwd" required></div>
+    <input type="submit" value="submit"></form>
+</body>
+</html>
