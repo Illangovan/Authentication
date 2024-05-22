@@ -6,7 +6,7 @@
     <title>Authentication app</title>
     <style>
         h1{
-            top: 230px;
+            top:150px;
             position: relative;
            text-align: center;
         }
@@ -19,6 +19,9 @@
             width: 100%;
             height: 80vh;
         }
+        h3{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -26,10 +29,15 @@
     <form action="/home" method="post">
     <div>
         <label for="uname">USERNAME:</label>
-        <input type="text" name="uname" required>
+        <input type="text" name="uname" placeholder="username" required>
     </div>
    <div><label for="pwd">PASSWORD:</label>
-    <input type="text" name="pwd" required></div>
-    <input type="submit" value="submit"></form>
+    <input type="text" name="pwd" placeholder="password"></div>
+    <input type="submit" value="submit">
+    <%if(locals.data){%>
+    <h3>wrong password</h3>
+    <%}%>
+</form>
+    
 </body>
 </html>
